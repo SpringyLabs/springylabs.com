@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;800;900&display=swap");
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background: linear-gradient(
+    300deg,
+    rgba(109, 237, 195, 0.075),
+    white,
+    white,
+    white,
+    rgba(109, 237, 195, 0.075)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  text-direction: none;
+}
+
+:root {
+  --accent: #6dedc3;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+main section .article {
+  padding: 0px 384px 0px;
+  text-align: left;
+}
+
+main section .article a {
+  text-decoration: none;
+  color: black;
+}
+
+main section .article a:hover {
+  text-decoration: underline;
+}
+
+main section .the-start-title {
+  margin-top: 64px;
+}
+
+main nav #menu {
+  position: absolute;
+  z-index: 5;
+  display: none;
+  align-items: center;
+  padding: 12px 16px 12px;
+  border-radius: 32px;
+  background: white;
+  opacity: 1;
+  border: 0.1px solid lightgray;
+  transition: 0.5s ease;
+}
+
+main nav #menu a {
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  margin-left: 24px;
+  margin-right: 24px;
+  transition: 0.3s ease;
+}
+
+main nav #menu a:hover {
+  opacity: 0.75;
+}
+
+main nav #menu a:active {
+  opacity: 0.5;
+}
+
+main nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-around;
+}
+
+main nav img {
+  height: 128px;
+  width: 128px;
+}
+
+main nav span {
+  cursor: pointer;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+main nav span:hover {
+  opacity: 0.75;
+}
+
+main nav span:active {
+  opacity: 0.5;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-around;
+}
+
+main section h1 {
+  font-weight: 700;
+  font-size: 72px;
+  text-align: center;
+  line-height: 72px;
+  margin-top: 144px;
+  margin-bottom: 32px;
+}
+
+main section h1 .localhost {
+  font-size: 76px;
+  background: -webkit-linear-gradient(135deg, var(--accent), green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main section h1 .launch {
+  font-size: 76px;
+  background: -webkit-linear-gradient(135deg, var(--accent), #3cb371);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main section p {
+  margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+main section .tag {
+  padding: 7px 14px 7px;
+  border: 1px solid #616161;
+  border-radius: 32px;
+  font-size: 13px;
+  margin-bottom: 128px;
+  font-weight: 300;
+}
+
+main section form {
+  display: flex;
+  align-items: center;
+  padding: 8px 8px 8px;
+  border: 1px solid #b8b8b8;
+  border-radius: 10px;
+}
+
+main section form span {
+  margin-left: 8px;
+  margin-right: 12px;
+  color: gray;
+}
+
+main section form input {
+  border: none;
+  font-family: "Inter", sans-serif;
+  margin-right: 12px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+main section form input:focus {
+  outline: none;
+  border: none;
+}
+
+main section form button {
+  background: var(--accent);
+  color: white;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px 8px;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+main section form button:hover {
+  opacity: 0.75;
+}
+
+main section form button:active {
+  opacity: 0.5;
+}
+
+main section form button span {
+  margin: 0;
+  margin-left: 8px;
+  color: white;
+}
+
+main section #alert {
+  background: var(--accent);
+  color: white;
+  padding: 12px 12px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  padding-right: 16px;
+  margin-top: 32px;
+}
+
+main section #alert span {
+  margin-right: 16px;
+  padding-left: 4px;
+}
+
+main #team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  justify-content: center;
+}
+
+@media (max-width: 400px) {
+  main nav #menu {
+    margin-top: 144px;
+  }
+
+  main nav #menu a {
+    font-size: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  main nav span {
+    margin-right: 42px;
+  }
+
+  main section h1 {
+    padding: 0px 32px 0px;
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 48px;
+  }
+
+  main section h1 .localhost {
+    font-size: 36px;
+  }
+
+  main section h1 .launch {
+    font-size: 36px;
+  }
+
+  main section p {
+    padding: 0px 64px 0px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  main section .tag {
+    margin-bottom: 96px;
+  }
+
+  main section form .material-symbols-outlined {
+    font-size: 18px;
+  }
+
+  main section form input {
+    font-size: 10px;
+    margin-right: 0;
+    width: fit-content;
+  }
+
+  main section form button {
+    font-size: 10px;
+  }
+
+  main section form button span {
+    font-size: 10px;
+  }
+
+  main section .article {
+    padding: 0px 64px 0px;
+  }
+
+  main section #sign {
+    padding-bottom: 64px;
+  }
+}
