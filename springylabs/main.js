@@ -3,14 +3,23 @@ import { getFirestore, setDoc, doc, collection } from 'firebase/firestore';
 
 console.log(firebase);
 
-if (document.title === 'SpringyLabs: Pricing') {
-    console.log('changing link tag');
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = '/assets/index-bcd39001.css';
-    document.head.appendChild(link);
-}
+window.addEventListener('load', () => {
+    if (document.title === 'SpringyLabs: Pricing') {
+        console.log('changing link tag');
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/assets/index-bcd39001.css';
+        document.head.appendChild(link);
+    } else if (document.title === 'SpringyLabs: The Start') {
+        console.log('changing link tag');
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/assets/index-bcd39001.css';
+        document.head.appendChild(link);
+    }
+})
  
 const db = getFirestore(firebase);
 
