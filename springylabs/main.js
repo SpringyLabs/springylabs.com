@@ -87,6 +87,7 @@ leadGenerationForm.addEventListener('submit', async e => {
             email: leadGenerationForm.email.value
         })
         alertMsg.style.display = 'flex';
+        
         alertMsg.setAttribute('data-m', 'bounce-up');
         wait(7500).then(() => {
             alertMsg.style.animation = 'disappear 0.5s ease';
